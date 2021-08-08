@@ -4,7 +4,7 @@
 
 ## Mocking (задача со звёздочкой)
 
-**Важно**: данная задача не является обязательной 
+**Важно**: данная задача не является обязательной
 
 ### Легенда
 
@@ -25,12 +25,12 @@ import fetchData from './http';
 
 export function getLevel(userId) {
   const response = fetchData(`https://server/user/${userId}`);
-  
+
   // TODO: логика обработки
   if (response.status === 'ok') {
-     return `Ваш текущий уровень: ${response.level}`; 
+     return `Ваш текущий уровень: ${response.level}`;
   }
-  
+
   return `Информация об уровне временно недоступна`;
 }
 ```
@@ -38,5 +38,3 @@ export function getLevel(userId) {
 Сделайте моки для функции `fetchData` и напишите тесты таким образом, чтобы обеспечить 100% покрытие тестами функции `getLevel` по строкам.
 
 **Обратите внимание**: тесты вам надо писать для функции `getLevel`
-
----
